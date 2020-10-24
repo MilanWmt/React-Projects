@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Icon,PageHeader,Modal, Button } from 'antd';
+import { Row, Col, Card, Icon, PageHeader, Modal, Button } from 'antd';
 const { Meta } = Card;
 class movie extends React.Component {
   state = { visible: false };
@@ -26,24 +26,26 @@ class movie extends React.Component {
 
   render() {
     return (
-      <>
-        <Button type="primary" onClick={this.showModal}>
-          Open Modal
-        </Button>
-        <Modal
-          title="Basic Modal"
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-        >
-           <Card
-    hoverable
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-        </Modal>
-      </>
+        <>
+          <Button type="primary" onClick={this.showModal}>
+            Open Modal
+          </Button>
+          <Modal
+              title="Basic Modal"
+              visible={this.state.visible}
+              onOk={this.handleOk}
+              onCancel={this.handleCancel}
+          >
+            <Card
+                hoverable
+                cover={
+                  <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+                }
+            >
+              <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+          </Modal>
+        </>
     );
   }
 }
